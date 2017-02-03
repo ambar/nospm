@@ -1,0 +1,24 @@
+{
+  "name": "nospm",
+  "version": "1.1",
+  "manifest_version": 2,
+  "description": "移除虾米、淘宝和天猫网址中的 spm 参数（包括地址栏和页面中的链接）",
+  "icons": {
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.taobao.com/*",
+        "https://*.taobao.com/*",
+        "http://*.tmall.com/*",
+        "https://*.tmall.com/*",
+        "http://*.xiami.com/*",
+        "https://*.xiami.com/*"
+      ],
+      "js": [
+        "nospm.js"
+      ]
+    }
+  ]
+}
